@@ -10,12 +10,9 @@ import Foundation
 import RxSwift
 import Moya
 
-protocol HasServices {
-    var services: Services { get }
-}
-
 class Services: BaseServices {
     
+    // Categories
     func getCategories() -> Observable<CategoryData> {
         let endpoint = ServiceAPI.getCategories()
         return provider.request(MultiTarget(endpoint)).asObservable().map(CategoryData.self).flatMap({ (data) -> Observable<CategoryData> in
@@ -23,6 +20,7 @@ class Services: BaseServices {
         })
     }
     
+    // Products for category
     func postProducts(_ ctegoryID: Int) -> Observable<ProductData> {
         let endpoint = ServiceAPI.postProducts(ctegoryID)
         return provider.request(MultiTarget(endpoint)).asObservable().map(ProductData.self).flatMap({ (data) -> Observable<ProductData> in
@@ -30,6 +28,7 @@ class Services: BaseServices {
         })
     }
     
+    // Product detail
     func getProductDetail(_ id: Int) -> Observable<ProductDetailData> {
         let endpoint = ServiceAPI.getProductDetail(id)
         return provider.request(MultiTarget(endpoint)).asObservable().map(ProductDetailData.self).flatMap({ (data) -> Observable<ProductDetailData> in

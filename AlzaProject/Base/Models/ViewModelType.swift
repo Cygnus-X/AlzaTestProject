@@ -1,5 +1,5 @@
 //
-//  BaseViewModel.swift
+//  ViewModelType.swift
 //  AlzaProject
 //
 //  Created by Viktor Kaderabek on 06/01/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BaseViewModel {
+protocol ViewModelType {
     associatedtype Input
     associatedtype Output
     

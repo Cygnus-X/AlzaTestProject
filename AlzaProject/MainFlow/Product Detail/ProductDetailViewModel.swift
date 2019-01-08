@@ -10,12 +10,22 @@ import UIKit
 import RxSwift
 
 class ProductDetailViewModel: BaseViewModel {
-    var services : Services!
+    // Do additional model stuff
+}
+
+extension ProductDetailViewModel: ViewModelType {
     
-    init(services: Services) {
-        self.services = services
+    // Inputs
+    struct Input {
+        let getProduct : Observable<Int>
     }
     
+    // Outputs
+    struct Output {
+        let productDetail : Observable<ProductDetailData>
+    }
+    
+    // Collecting Inputs producing Outputs
     func transform(input: ProductDetailViewModel.Input) -> ProductDetailViewModel.Output {
         let requestProducts = input.getProduct
         let products = requestProducts.flatMap { (id)  -> Observable<ProductDetailData> in
@@ -23,14 +33,5 @@ class ProductDetailViewModel: BaseViewModel {
         }
         
         return Output(productDetail: products)
-    }
-}
-
-extension ProductDetailViewModel {
-    struct Input {
-        let getProduct : Observable<Int>
-    }
-    struct Output {
-        let productDetail : Observable<ProductDetailData>
     }
 }

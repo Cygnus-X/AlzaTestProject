@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class ProductsViewController: UIViewController {
+class ProductsViewController: BaseViewController {
     
     var category : Category? {
         didSet {
@@ -23,14 +23,16 @@ class ProductsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = category?.name
         // Do any additional setup after loading the view.
-        setupViewModel()
     }
-    let disposeBag : DisposeBag = DisposeBag()
     
-    let productViewModel : ProductViewModel = ProductViewModel(services: Services())
+    let productViewModel : ProductViewModel = ProductViewModel()
     let productsSubject: PublishSubject<Int> = PublishSubject<Int>()
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.register(UINib(nibName: ProductTableViewCell.nameOfClass, bundle: nil), forCellReuseIdentifier: ProductTableViewCell.nameOfClass)
+        }
+    }
     
     var sourceData : Array<Product> = [] {
         didSet {
@@ -38,7 +40,9 @@ class ProductsViewController: UIViewController {
         }
     }
     
-    func setupViewModel() {
+    override func setupViewModel() {
+        super.setupViewModel()
+        
         let productInput = ProductViewModel.Input(getProducts: productsSubject)
         
         let output = productViewModel.transform(input: productInput)
@@ -73,9 +77,13 @@ extension ProductsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let product = sourceData[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
-        cell.textLabel?.text = product.name
-        cell.detailTextLabel?.text = product.price
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.nameOfClass, for: indexPath) as! ProductTableViewCell
+        cell.nameLabel.text = product.name
+        cell.priceLabel.text = product.price
+        cell.specLabel.text = product.spec
+        if let url = URL(string: product.img) {
+            cell.productImageView?.af_setImage(withURL: url)
+        }
         return cell
     }
 }
@@ -83,6 +91,8 @@ extension ProductsViewController: UITableViewDataSource {
 extension ProductsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let product = sourceData[indexPath.row]
+        
+        // product selected
         performSegue(withIdentifier: "show\(ProductDetailViewController.nameOfClass)", sender: product)
     }
 }

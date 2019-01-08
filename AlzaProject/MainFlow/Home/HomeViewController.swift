@@ -9,11 +9,10 @@
 import UIKit
 import RxSwift
 
-class HomeViewController: UIViewController {
-
-    let disposeBag : DisposeBag = DisposeBag()
+class HomeViewController: BaseViewController {
     
-    let homeViewModel : HomeViewModel = HomeViewModel(services: Services())
+    let homeViewModel : HomeViewModel = HomeViewModel()
+    
     let categoriesSubject: PublishSubject<()> = PublishSubject<()>()
     
     @IBOutlet weak var tableView: UITableView!
@@ -27,10 +26,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        setupViewModel()
     }
 
-    func setupViewModel() {
+    override func setupViewModel() {
+        super.setupViewModel()
+        
         let categoriesInput = HomeViewModel.Input(getCategories: categoriesSubject)
         
         let output = homeViewModel.transform(input: categoriesInput)
@@ -40,6 +40,7 @@ class HomeViewController: UIViewController {
                 self?.sourceData = data.data
             }).disposed(by: disposeBag)
         
+        // trigger get categories
         categoriesSubject.onNext(())
     }
     
@@ -73,7 +74,8 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = sourceData[indexPath.row]
-        print(category.id)
+        
+        // category selected
         performSegue(withIdentifier: "show\(ProductsViewController.nameOfClass)", sender: category)
     }
 }

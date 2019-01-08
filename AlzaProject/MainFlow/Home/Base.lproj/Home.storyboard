@@ -55,7 +55,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Categories" id="Mdb-cc-I5j"/>
+                    <navigationItem key="navigationItem" title="Categories" id="Mdb-cc-I5j">
+                        <barButtonItem key="backBarButtonItem" title=" " id="5oL-gL-Ure"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="tBr-rc-gRb" id="h4a-fn-ELS"/>
                         <segue destination="FEF-c7-0rX" kind="show" identifier="showProductsViewController" id="ssX-xN-jXc"/>

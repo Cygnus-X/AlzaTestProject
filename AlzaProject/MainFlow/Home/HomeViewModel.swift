@@ -10,13 +10,22 @@ import UIKit
 import RxSwift
 
 class HomeViewModel: BaseViewModel {
-    var services : Services!
+    // Do additional model stuff
+}
+
+extension HomeViewModel: ViewModelType {
     
-    init(services: Services) {
-        self.services = services
+    // Inputs
+    struct Input {
+        let getCategories : Observable<()>
     }
     
+    // Outputs
+    struct Output {
+        let categories : Observable<CategoryData>
+    }
     
+    // Collecting Inputs producing Outputs
     func transform(input: HomeViewModel.Input) -> HomeViewModel.Output {
         let requestCategories = input.getCategories
         let categories = requestCategories.flatMap { (_)  -> Observable<CategoryData> in
@@ -24,14 +33,5 @@ class HomeViewModel: BaseViewModel {
         }
         
         return Output(categories: categories)
-    }
-}
-
-extension HomeViewModel {
-    struct Input {
-        let getCategories : Observable<()>
-    }
-    struct Output {
-        let categories : Observable<CategoryData>
     }
 }
