@@ -11,6 +11,14 @@ import RxSwift
 
 class HomeViewModel: BaseViewModel {
     // Do additional model stuff
+    
+    typealias Dependencies = HasCategoriServices
+    
+    let dependencies: Dependencies
+    
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
+    }
 }
 
 extension HomeViewModel: ViewModelType {
@@ -29,7 +37,7 @@ extension HomeViewModel: ViewModelType {
     func transform(input: HomeViewModel.Input) -> HomeViewModel.Output {
         let requestCategories = input.getCategories
         let categories = requestCategories.flatMap { (_)  -> Observable<CategoryData> in
-            return self.services.getCategories()
+            return self.dependencies.categoryServices.getCategories()
         }
         
         return Output(categories: categories)

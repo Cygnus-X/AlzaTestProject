@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Flow Control - trigger
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if let window = window {
+            let flowController = AppFlowController(window: window)
+            flowController.start()
+        }
+        
         return true
     }
 

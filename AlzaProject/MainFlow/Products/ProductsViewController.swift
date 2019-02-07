@@ -25,7 +25,7 @@ class ProductsViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-    let productViewModel : ProductViewModel = ProductViewModel()
+//    let productViewModel : ProductViewModel = ProductViewModel()
     let productsSubject: PublishSubject<Int> = PublishSubject<Int>()
     
     @IBOutlet weak var tableView: UITableView! {
@@ -45,16 +45,16 @@ class ProductsViewController: BaseViewController {
         
         let productInput = ProductViewModel.Input(getProducts: productsSubject)
         
-        let output = productViewModel.transform(input: productInput)
-        output.products
-            .subscribeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] (data) -> () in
-                self?.sourceData = data.data
-            }).disposed(by: disposeBag)
-        
-        if let categoryID = category?.id {
-            productsSubject.onNext(categoryID)
-        }
+//        let output = productViewModel.transform(input: productInput)
+//        output.products
+//            .subscribeOn(MainScheduler.instance)
+//            .subscribe(onNext: { [weak self] (data) -> () in
+//                self?.sourceData = data.data
+//            }).disposed(by: disposeBag)
+//        
+//        if let categoryID = category?.id {
+//            productsSubject.onNext(categoryID)
+//        }
     }
     
     // MARK: - Navigation

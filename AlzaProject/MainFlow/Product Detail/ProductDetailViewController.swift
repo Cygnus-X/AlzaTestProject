@@ -29,7 +29,7 @@ class ProductDetailViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-    let productDetailViewModel : ProductDetailViewModel = ProductDetailViewModel()
+//    let productDetailViewModel : ProductDetailViewModel = ProductDetailViewModel()
     let productDetailSubject: PublishSubject<Int> = PublishSubject<Int>()
     
     override func setupViewModel() {
@@ -39,17 +39,17 @@ class ProductDetailViewController: BaseViewController {
         let productDetailInput = ProductDetailViewModel.Input(getProduct: productDetailSubject)
         
         // Subscribing Outputs
-        let output = productDetailViewModel.transform(input: productDetailInput)
-        output.productDetail
-            .subscribeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] (data) -> () in
-                self?.populate(with: data.data)
-            }).disposed(by: disposeBag)
-        
-        // get product detail
-        if let productID = product?.id {
-            productDetailSubject.onNext(productID)
-        }
+//        let output = productDetailViewModel.transform(input: productDetailInput)
+//        output.productDetail
+//            .subscribeOn(MainScheduler.instance)
+//            .subscribe(onNext: { [weak self] (data) -> () in
+//                self?.populate(with: data.data)
+//            }).disposed(by: disposeBag)
+//        
+//        // get product detail
+//        if let productID = product?.id {
+//            productDetailSubject.onNext(productID)
+//        }
     }
     
     fileprivate func populate(with productDetail: ProductDetail) {

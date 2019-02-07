@@ -11,6 +11,14 @@ import RxSwift
 
 class ProductDetailViewModel: BaseViewModel {
     // Do additional model stuff
+    
+    typealias Dependencies = HasProductServices
+    
+    let dependencies: Dependencies
+    
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
+    }
 }
 
 extension ProductDetailViewModel: ViewModelType {
@@ -29,7 +37,7 @@ extension ProductDetailViewModel: ViewModelType {
     func transform(input: ProductDetailViewModel.Input) -> ProductDetailViewModel.Output {
         let requestProducts = input.getProduct
         let products = requestProducts.flatMap { (id)  -> Observable<ProductDetailData> in
-            return self.services.getProductDetail(id)
+            return self.dependencies.productServices.getProductDetail(id)
         }
         
         return Output(productDetail: products)

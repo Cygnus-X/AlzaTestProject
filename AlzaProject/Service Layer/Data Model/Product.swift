@@ -10,10 +10,6 @@ import Foundation
 
 struct ProductData: Codable {
     let data : Array<Product>
-    
-    enum CodingKeys: String, CodingKey {
-        case data
-    }
 }
 
 struct Product: Codable {
@@ -22,12 +18,4 @@ struct Product: Codable {
     let price : String
     let spec : String
     let img : String
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case price
-        case spec
-        case img
-    }
 }

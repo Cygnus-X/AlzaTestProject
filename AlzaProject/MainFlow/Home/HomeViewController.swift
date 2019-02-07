@@ -9,10 +9,17 @@
 import UIKit
 import RxSwift
 
+protocol HomeFlowDelegate: class {
+    
+}
+
 class HomeViewController: BaseViewController {
     
-    let homeViewModel : HomeViewModel = HomeViewModel()
+    // Flow Control
+    weak var flowDelegate: HomeFlowDelegate?
+    var homeViewModel : HomeViewModel?
     
+    // Outlets
     let categoriesSubject: PublishSubject<()> = PublishSubject<()>()
     
     @IBOutlet weak var tableView: UITableView!
@@ -33,7 +40,10 @@ class HomeViewController: BaseViewController {
         
         let categoriesInput = HomeViewModel.Input(getCategories: categoriesSubject)
         
-        let output = homeViewModel.transform(input: categoriesInput)
+        guard let output = homeViewModel?.transform(input: categoriesInput) else {
+            return
+        }
+        
         output.categories
             .subscribeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] (data) -> () in

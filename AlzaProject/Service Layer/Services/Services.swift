@@ -10,7 +10,12 @@ import Foundation
 import RxSwift
 import Moya
 
-class Services: BaseServices {
+// Used with navigation controller as dependency injection
+protocol HasCategoriServices {
+    var categoryServices: CategoryServices { get }
+}
+
+class CategoryServices: BaseServices {
     
     // Categories
     func getCategories() -> Observable<CategoryData> {
@@ -19,6 +24,19 @@ class Services: BaseServices {
             return Observable.just(data)
         })
     }
+}
+
+
+/* -------------- */
+
+
+
+// Used with navigation controller as dependency injection
+protocol HasProductServices {
+    var productServices: ProductServices { get }
+}
+
+class ProductServices: BaseServices {
     
     // Products for category
     func postProducts(_ ctegoryID: Int) -> Observable<ProductData> {

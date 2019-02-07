@@ -36,6 +36,9 @@
 		A896BA7C21E2B1BC004C6E10 /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A896BA7B21E2B1BC004C6E10 /* Products.storyboard */; };
 		A896BA7E21E2B2A3004C6E10 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A896BA7D21E2B2A3004C6E10 /* ProductViewModel.swift */; };
 		A896BA8321E2C0E4004C6E10 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A896BA8221E2C0E4004C6E10 /* ProductDetailViewModel.swift */; };
+		A8A7375C220C52C4009C56CD /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7375B220C52C4009C56CD /* AppDependency.swift */; };
+		A8A7375E220C557A009C56CD /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7375D220C557A009C56CD /* AppFlowController.swift */; };
+		A8A73760220C5666009C56CD /* HomeFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7375F220C5666009C56CD /* HomeFlowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		A896BA7B21E2B1BC004C6E10 /* Products.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
 		A896BA7D21E2B2A3004C6E10 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		A896BA8221E2C0E4004C6E10 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		A8A7375B220C52C4009C56CD /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		A8A7375D220C557A009C56CD /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
+		A8A7375F220C5666009C56CD /* HomeFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,8 @@
 				A896BA4D21E2837B004C6E10 /* Service Layer */,
 				A896BA3D21E27E4D004C6E10 /* Assets.xcassets */,
 				A896BA3621E27E49004C6E10 /* AppDelegate.swift */,
+				A8A7375B220C52C4009C56CD /* AppDependency.swift */,
+				A8A7375D220C557A009C56CD /* AppFlowController.swift */,
 				A896BA3F21E27E4D004C6E10 /* LaunchScreen.storyboard */,
 				A896BA4221E27E4D004C6E10 /* Info.plist */,
 			);
@@ -232,6 +240,7 @@
 		A896BA7121E2ABC9004C6E10 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A8A7375F220C5666009C56CD /* HomeFlowController.swift */,
 				A896BA3A21E27E49004C6E10 /* Home.storyboard */,
 				A896BA3821E27E49004C6E10 /* HomeViewController.swift */,
 				A896BA4821E282FF004C6E10 /* HomeViewModel.swift */,
@@ -405,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A896BA7E21E2B2A3004C6E10 /* ProductViewModel.swift in Sources */,
+				A8A7375C220C52C4009C56CD /* AppDependency.swift in Sources */,
 				A844FDA421E4338B0001EE12 /* BaseViewModel.swift in Sources */,
 				A896BA5121E28825004C6E10 /* ServiceAPI.swift in Sources */,
 				A896BA3921E27E49004C6E10 /* HomeViewController.swift in Sources */,
@@ -418,6 +428,7 @@
 				A896BA4C21E28332004C6E10 /* ViewModelType.swift in Sources */,
 				A896BA6221E2930A004C6E10 /* BaseServices.swift in Sources */,
 				A896BA8321E2C0E4004C6E10 /* ProductDetailViewModel.swift in Sources */,
+				A8A7375E220C557A009C56CD /* AppFlowController.swift in Sources */,
 				A896BA7621E2B009004C6E10 /* ProductsViewController.swift in Sources */,
 				A896BA5C21E28F94004C6E10 /* Product.swift in Sources */,
 				A896BA6F21E2A857004C6E10 /* NSObject+Ext.swift in Sources */,
@@ -425,6 +436,7 @@
 				A844FD9921E423BA0001EE12 /* ProductDetailViewController.swift in Sources */,
 				A844FD9D21E42A570001EE12 /* ProductTableViewCell.swift in Sources */,
 				A896BA3721E27E49004C6E10 /* AppDelegate.swift in Sources */,
+				A8A73760220C5666009C56CD /* HomeFlowController.swift in Sources */,
 				A896BA6721E297B8004C6E10 /* CustomNetworkActivityPlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

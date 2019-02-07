@@ -9,8 +9,5 @@
 import UIKit
 
 class BaseViewModel {
-    
-    // Default Services dependency
-    let services : Services = Services()
-
+    // Is there something in common?
 }
