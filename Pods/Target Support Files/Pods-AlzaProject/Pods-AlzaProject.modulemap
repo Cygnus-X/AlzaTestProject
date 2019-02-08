@@ -1,0 +1,6 @@
+framework module Pods_AlzaProject {
+  umbrella header "Pods-AlzaProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
