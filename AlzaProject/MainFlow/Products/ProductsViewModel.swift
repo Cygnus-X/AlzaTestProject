@@ -1,5 +1,5 @@
 //
-//  ProductViewModel.swift
+//  ProductsViewModel.swift
 //  AlzaProject
 //
 //  Created by Viktor Kaderabek on 06/01/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class ProductViewModel: BaseViewModel {
+class ProductsViewModel: BaseViewModel {
     // Do additional model stuff
     
     typealias Dependencies = HasProductServices
@@ -21,7 +21,7 @@ class ProductViewModel: BaseViewModel {
     }
 }
 
-extension ProductViewModel: ViewModelType {
+extension ProductsViewModel: ViewModelType {
     
     // Inputs
     struct Input {
@@ -34,7 +34,7 @@ extension ProductViewModel: ViewModelType {
     }
     
     // Collecting Inputs producing Outputs
-    func transform(input: ProductViewModel.Input) -> ProductViewModel.Output {
+    func transform(input: ProductsViewModel.Input) -> ProductsViewModel.Output {
         let requestProducts = input.getProducts
         let products = requestProducts.flatMap { (id)  -> Observable<ProductData> in
             return self.dependencies.productServices.postProducts(id)

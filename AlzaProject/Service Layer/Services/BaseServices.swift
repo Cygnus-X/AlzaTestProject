@@ -13,5 +13,4 @@ import RxSwift
 class BaseServices: NSObject {
     
     let provider = AuthenticatedProvider<MultiTarget>()
-    
 }

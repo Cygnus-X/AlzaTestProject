@@ -10,8 +10,17 @@ import UIKit
 import RxSwift
 import AlamofireImage
 
+protocol ProductDetailFlowDelegate {
+    
+}
+
 class ProductDetailViewController: BaseViewController {
    
+    // Flow Control
+    var flowDelegate: ProductDetailFlowDelegate?
+    var viewModel : ProductDetailViewModel?
+    
+    // Outlets
     var product : Product? {
         didSet {
             if let productID = product?.id {
@@ -39,17 +48,20 @@ class ProductDetailViewController: BaseViewController {
         let productDetailInput = ProductDetailViewModel.Input(getProduct: productDetailSubject)
         
         // Subscribing Outputs
-//        let output = productDetailViewModel.transform(input: productDetailInput)
-//        output.productDetail
-//            .subscribeOn(MainScheduler.instance)
-//            .subscribe(onNext: { [weak self] (data) -> () in
-//                self?.populate(with: data.data)
-//            }).disposed(by: disposeBag)
-//        
-//        // get product detail
-//        if let productID = product?.id {
-//            productDetailSubject.onNext(productID)
-//        }
+        guard let output = viewModel?.transform(input: productDetailInput) else {
+            return
+        }
+        
+        output.productDetail
+            .subscribeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (data) -> () in
+                self?.populate(with: data.data)
+            }).disposed(by: disposeBag)
+        
+        // get product detail
+        if let productID = product?.id {
+            productDetailSubject.onNext(productID)
+        }
     }
     
     fileprivate func populate(with productDetail: ProductDetail) {

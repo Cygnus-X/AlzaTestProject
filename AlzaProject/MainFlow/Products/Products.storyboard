@@ -42,20 +42,11 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="O5r-8M-178" id="L6s-Zn-b30"/>
-                        <segue destination="2fd-IK-nkY" kind="show" identifier="showProductDetailViewController" id="VJk-SK-vtR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jnu-JG-SJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850" y="107"/>
-        </scene>
-        <!--ProductDetail-->
-        <scene sceneID="1ld-SR-MHC">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ProductDetail" id="2fd-IK-nkY" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b7u-Q0-lwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1705" y="107"/>
         </scene>
     </scenes>
 </document>

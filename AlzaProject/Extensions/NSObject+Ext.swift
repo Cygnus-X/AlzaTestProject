@@ -19,4 +19,14 @@ extension NSObject {
             return className
         }
     }
+    
+    /// generating storyboard name from class name literal
+    public class var nameOfStoryboard: String {
+        get {
+            guard let className = NSStringFromClass(self).components(separatedBy: ".").last else {
+                return "N/A"
+            }
+            return className.replacingOccurrences(of: "ViewController", with: "")
+        }
+    }
 }

@@ -9,8 +9,17 @@
 import UIKit
 import RxSwift
 
+protocol ProductsFlowDelegate {
+    func showDetailOf(product: Product)
+}
+
 class ProductsViewController: BaseViewController {
     
+    // Flow Control
+    var flowDelegate: ProductsFlowDelegate?
+    var viewModel : ProductsViewModel?
+    
+    // Outlets
     var category : Category? {
         didSet {
             if let categoryID = category?.id {
@@ -43,31 +52,24 @@ class ProductsViewController: BaseViewController {
     override func setupViewModel() {
         super.setupViewModel()
         
-        let productInput = ProductViewModel.Input(getProducts: productsSubject)
+        // Collecting Inputs
+        let productInput = ProductsViewModel.Input(getProducts: productsSubject)
         
-//        let output = productViewModel.transform(input: productInput)
-//        output.products
-//            .subscribeOn(MainScheduler.instance)
-//            .subscribe(onNext: { [weak self] (data) -> () in
-//                self?.sourceData = data.data
-//            }).disposed(by: disposeBag)
-//        
-//        if let categoryID = category?.id {
-//            productsSubject.onNext(categoryID)
-//        }
-    }
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if let productDetailVC = segue.destination as? ProductDetailViewController, let product = sender as? Product {
-            productDetailVC.product = product
+        // Subscribing Outputs
+        guard let output = viewModel?.transform(input: productInput) else {
+            return
+        }
+        
+        output.products
+            .subscribeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (data) -> () in
+                self?.sourceData = data.data
+            }).disposed(by: disposeBag)
+        
+        if let categoryID = category?.id {
+            productsSubject.onNext(categoryID)
         }
     }
-    
 }
 
 extension ProductsViewController: UITableViewDataSource {
@@ -90,9 +92,9 @@ extension ProductsViewController: UITableViewDataSource {
 
 extension ProductsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let product = sourceData[indexPath.row]
         
         // product selected
-        performSegue(withIdentifier: "show\(ProductDetailViewController.nameOfClass)", sender: product)
+        let product = sourceData[indexPath.row]
+        flowDelegate?.showDetailOf(product: product)
     }
 }

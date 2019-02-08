@@ -11,7 +11,6 @@ import UIKit
 class AppFlowController {
     
     fileprivate let window: UIWindow
-    
     fileprivate let dependencies: AppDependency
     
     init(window: UIWindow) {
@@ -24,7 +23,7 @@ class AppFlowController {
         let navController = UINavigationController()
         window.rootViewController = navController
         window.makeKeyAndVisible()
-        let flowController = HomeFlowController(navigationController: navController, dependencies: dependencies)
+        let flowController = MainFlowController(navigationController: navController, dependencies: dependencies)
         flowController.start()
     }
 }

@@ -9,15 +9,15 @@
 import UIKit
 import RxSwift
 
-protocol HomeFlowDelegate: class {
-    
+protocol HomeFlowDelegate {
+    func showProductsFor(category: Category)
 }
 
 class HomeViewController: BaseViewController {
     
     // Flow Control
-    weak var flowDelegate: HomeFlowDelegate?
-    var homeViewModel : HomeViewModel?
+    var flowDelegate: HomeFlowDelegate?
+    var viewModel : HomeViewModel?
     
     // Outlets
     let categoriesSubject: PublishSubject<()> = PublishSubject<()>()
@@ -38,9 +38,11 @@ class HomeViewController: BaseViewController {
     override func setupViewModel() {
         super.setupViewModel()
         
+        // Collecting Inputs
         let categoriesInput = HomeViewModel.Input(getCategories: categoriesSubject)
         
-        guard let output = homeViewModel?.transform(input: categoriesInput) else {
+        // Subscribing Outputs
+        guard let output = viewModel?.transform(input: categoriesInput) else {
             return
         }
         
@@ -53,18 +55,6 @@ class HomeViewController: BaseViewController {
         // trigger get categories
         categoriesSubject.onNext(())
     }
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if let productsVC = segue.destination as? ProductsViewController, let category = sender as? Category {
-            productsVC.category = category
-        }
-    }
-
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -83,10 +73,10 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let category = sourceData[indexPath.row]
         
         // category selected
-        performSegue(withIdentifier: "show\(ProductsViewController.nameOfClass)", sender: category)
+        let category = sourceData[indexPath.row]
+        flowDelegate?.showProductsFor(category: category)
     }
 }
 

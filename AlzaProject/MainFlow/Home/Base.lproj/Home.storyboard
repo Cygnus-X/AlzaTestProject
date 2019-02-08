@@ -60,20 +60,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="tBr-rc-gRb" id="h4a-fn-ELS"/>
-                        <segue destination="FEF-c7-0rX" kind="show" identifier="showProductsViewController" id="ssX-xN-jXc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-18" y="107"/>
-        </scene>
-        <!--Products-->
-        <scene sceneID="IxF-ee-NHt">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Products" id="FEF-c7-0rX" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PMe-g9-7mP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="850" y="107"/>
         </scene>
     </scenes>
 </document>
