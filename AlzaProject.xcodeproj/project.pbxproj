@@ -39,7 +39,18 @@
 		A8A7375C220C52C4009C56CD /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7375B220C52C4009C56CD /* AppDependency.swift */; };
 		A8A7375E220C557A009C56CD /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7375D220C557A009C56CD /* AppFlowController.swift */; };
 		A8A73760220C5666009C56CD /* MainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7375F220C5666009C56CD /* MainFlowController.swift */; };
+		A8AECB302218D16E00D0C5B0 /* AlzaProjectUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AECB2F2218D16E00D0C5B0 /* AlzaProjectUnitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8AECB322218D16E00D0C5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A896BA2B21E27E49004C6E10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A896BA3221E27E49004C6E10;
+			remoteInfo = AlzaProject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0FB302F196F91CF5D8C004BB /* Pods-AlzaProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzaProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlzaProject/Pods-AlzaProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +89,9 @@
 		A8A7375B220C52C4009C56CD /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 		A8A7375D220C557A009C56CD /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
 		A8A7375F220C5666009C56CD /* MainFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowController.swift; sourceTree = "<group>"; };
+		A8AECB2D2218D16E00D0C5B0 /* AlzaProjectUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlzaProjectUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8AECB2F2218D16E00D0C5B0 /* AlzaProjectUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzaProjectUnitTests.swift; sourceTree = "<group>"; };
+		A8AECB312218D16E00D0C5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +100,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7FC4A47FC8031CBBA693BE /* Pods_AlzaProject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AECB2A2218D16E00D0C5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				A896BA3521E27E49004C6E10 /* AlzaProject */,
+				A8AECB2E2218D16E00D0C5B0 /* AlzaProjectUnitTests */,
 				A896BA3421E27E49004C6E10 /* Products */,
 				AC2A322B7099D4FFDE06668B /* Pods */,
 				18B3187E7A04C115E9194999 /* Frameworks */,
@@ -133,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				A896BA3321E27E49004C6E10 /* AlzaProject.app */,
+				A8AECB2D2218D16E00D0C5B0 /* AlzaProjectUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,6 +292,15 @@
 			path = "Product Detail";
 			sourceTree = "<group>";
 		};
+		A8AECB2E2218D16E00D0C5B0 /* AlzaProjectUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8AECB2F2218D16E00D0C5B0 /* AlzaProjectUnitTests.swift */,
+				A8AECB312218D16E00D0C5B0 /* Info.plist */,
+			);
+			path = AlzaProjectUnitTests;
+			sourceTree = "<group>";
+		};
 		AC2A322B7099D4FFDE06668B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +332,24 @@
 			productReference = A896BA3321E27E49004C6E10 /* AlzaProject.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A8AECB2C2218D16E00D0C5B0 /* AlzaProjectUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8AECB362218D16F00D0C5B0 /* Build configuration list for PBXNativeTarget "AlzaProjectUnitTests" */;
+			buildPhases = (
+				A8AECB292218D16E00D0C5B0 /* Sources */,
+				A8AECB2A2218D16E00D0C5B0 /* Frameworks */,
+				A8AECB2B2218D16E00D0C5B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8AECB332218D16E00D0C5B0 /* PBXTargetDependency */,
+			);
+			name = AlzaProjectUnitTests;
+			productName = AlzaProjectUnitTests;
+			productReference = A8AECB2D2218D16E00D0C5B0 /* AlzaProjectUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,6 +362,10 @@
 				TargetAttributes = {
 					A896BA3221E27E49004C6E10 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					A8AECB2C2218D16E00D0C5B0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A896BA3221E27E49004C6E10;
 					};
 				};
 			};
@@ -329,6 +383,7 @@
 			projectRoot = "";
 			targets = (
 				A896BA3221E27E49004C6E10 /* AlzaProject */,
+				A8AECB2C2218D16E00D0C5B0 /* AlzaProjectUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -344,6 +399,13 @@
 				A896BA7C21E2B1BC004C6E10 /* Products.storyboard in Resources */,
 				A896BA3C21E27E49004C6E10 /* Home.storyboard in Resources */,
 				A844FD9B21E425B30001EE12 /* ProductDetail.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AECB2B2218D16E00D0C5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +503,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8AECB292218D16E00D0C5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8AECB302218D16E00D0C5B0 /* AlzaProjectUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8AECB332218D16E00D0C5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A896BA3221E27E49004C6E10 /* AlzaProject */;
+			targetProxy = A8AECB322218D16E00D0C5B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A896BA3A21E27E49004C6E10 /* Home.storyboard */ = {
@@ -617,6 +695,46 @@
 			};
 			name = Release;
 		};
+		A8AECB342218D16F00D0C5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X324LUL4DB;
+				INFOPLIST_FILE = AlzaProjectUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = QestTest.AlzaProjectUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlzaProject.app/AlzaProject";
+			};
+			name = Debug;
+		};
+		A8AECB352218D16F00D0C5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X324LUL4DB;
+				INFOPLIST_FILE = AlzaProjectUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = QestTest.AlzaProjectUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlzaProject.app/AlzaProject";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -634,6 +752,15 @@
 			buildConfigurations = (
 				A896BA4621E27E4D004C6E10 /* Debug */,
 				A896BA4721E27E4D004C6E10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8AECB362218D16F00D0C5B0 /* Build configuration list for PBXNativeTarget "AlzaProjectUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8AECB342218D16F00D0C5B0 /* Debug */,
+				A8AECB352218D16F00D0C5B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
