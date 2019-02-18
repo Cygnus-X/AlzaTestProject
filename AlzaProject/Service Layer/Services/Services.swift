@@ -11,7 +11,7 @@ import RxSwift
 import Moya
 
 // Used with navigation controller as dependency injection
-protocol HasCategoriServices {
+protocol HasCategoryServices {
     var categoryServices: CategoryServices { get }
 }
 

@@ -60,7 +60,7 @@ extension ServiceAPI: TargetType {
         case .getProductDetail:
             return NetworkingUtilities.stubbedResponse("ProductDetail")
         case .getCategories:
-            return NetworkingUtilities.stubbedResponse("Category")
+            return NetworkingUtilities.stubbedResponse("ProductCategory")
         case .postProducts:
             return NetworkingUtilities.stubbedResponse("Product")
         }

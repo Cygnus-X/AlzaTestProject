@@ -5,25 +5,30 @@ target 'AlzaProject' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for AlzaProject
-    pod 'RxSwift'
-    pod 'RxCocoa'
+    # Pods for AlzaProject
+    pod 'RxSwift', '~> 4.0'
+    pod 'RxCocoa', '~> 4.0'
 
     pod 'Moya/RxSwift'
     pod 'AlamofireImage'
+    
+    target 'AlzaProjectUnitTests' do
+        # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+        use_frameworks!
+        
+        # Pods for AlzaProject
+        pod 'RxTest', '~> 4.0'
+        pod 'RxBlocking', '~> 4.0'
+        
+    end
 
 end
 
-target 'AlzaProjectUnitTests' do
-    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-    use_frameworks!
-    
-    # Pods for AlzaProject
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    
-    pod 'Moya/RxSwift'
-    pod 'AlamofireImage'
-    
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['CONFIGURATION_BUILD_DIR'] = '$PODS_CONFIGURATION_BUILD_DIR'
+        end
+    end
 end
 

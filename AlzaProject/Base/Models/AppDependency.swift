@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct AppDependency: HasCategoriServices,
+struct AppDependency: HasCategoryServices,
                       HasProductServices {
     
     let categoryServices: CategoryServices

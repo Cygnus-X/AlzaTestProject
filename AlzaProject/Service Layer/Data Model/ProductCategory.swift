@@ -1,5 +1,5 @@
 //
-//  Category.swift
+//  ProductCategory.swift
 //  AlzaProject
 //
 //  Created by Viktor Kaderabek on 06/01/2019.
@@ -9,10 +9,10 @@
 import Foundation
 
 struct CategoryData: Codable {
-    let data : Array<Category>
+    let data : Array<ProductCategory>
 }
 
-struct Category: Codable {
+struct ProductCategory: Codable {
     let id : Int
     let name : String
     let child_cnt : Int

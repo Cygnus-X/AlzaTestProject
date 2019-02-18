@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 
 protocol HomeFlowDelegate {
-    func showProductsFor(category: Category)
+    func showProductsFor(category: ProductCategory)
 }
 
 class HomeViewController: BaseViewController {
@@ -24,7 +24,7 @@ class HomeViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
-    var sourceData : Array<Category> = [] {
+    var sourceData : Array<ProductCategory> = [] {
         didSet {
             tableView.reloadData()
         }

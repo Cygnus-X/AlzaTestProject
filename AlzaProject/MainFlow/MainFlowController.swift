@@ -29,7 +29,7 @@ class MainFlowController {
 }
 
 extension MainFlowController: HomeFlowDelegate {
-    func showProductsFor(category: Category) {
+    func showProductsFor(category: ProductCategory) {
         let storyboard = UIStoryboard(name: ProductsViewController.nameOfStoryboard, bundle: nil)
         
         if let products = storyboard.instantiateInitialViewController() as? ProductsViewController {

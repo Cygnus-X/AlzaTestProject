@@ -20,7 +20,7 @@ class ProductsViewController: BaseViewController {
     var viewModel : ProductsViewModel?
     
     // Outlets
-    var category : Category? {
+    var category : ProductCategory? {
         didSet {
             if let categoryID = category?.id {
                 productsSubject.onNext(categoryID)

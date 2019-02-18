@@ -12,7 +12,7 @@ import RxSwift
 class HomeViewModel: BaseViewModel {
     // Do additional model stuff
     
-    typealias Dependencies = HasCategoriServices
+    typealias Dependencies = HasCategoryServices
     
     let dependencies: Dependencies
     
