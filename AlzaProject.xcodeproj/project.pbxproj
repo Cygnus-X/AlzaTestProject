@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F7FC4A47FC8031CBBA693BE /* Pods_AlzaProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 685544E50CA8B6EE47B7C006 /* Pods_AlzaProject.framework */; };
+		9138EB4A6C0CD28EF7AEB788 /* Pods_AlzaProjectUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273385556BFF629666E0A091 /* Pods_AlzaProjectUnitTests.framework */; };
 		A844FD9921E423BA0001EE12 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844FD9821E423BA0001EE12 /* ProductDetailViewController.swift */; };
 		A844FD9B21E425B30001EE12 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A844FD9A21E425B30001EE12 /* ProductDetail.storyboard */; };
 		A844FD9D21E42A570001EE12 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844FD9C21E42A570001EE12 /* ProductTableViewCell.swift */; };
@@ -39,10 +40,24 @@
 		A8A7375C220C52C4009C56CD /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7375B220C52C4009C56CD /* AppDependency.swift */; };
 		A8A7375E220C557A009C56CD /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7375D220C557A009C56CD /* AppFlowController.swift */; };
 		A8A73760220C5666009C56CD /* MainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7375F220C5666009C56CD /* MainFlowController.swift */; };
+		A8AECB302218D16E00D0C5B0 /* AlzaProjectUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AECB2F2218D16E00D0C5B0 /* AlzaProjectUnitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8AECB322218D16E00D0C5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A896BA2B21E27E49004C6E10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A896BA3221E27E49004C6E10;
+			remoteInfo = AlzaProject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0FB302F196F91CF5D8C004BB /* Pods-AlzaProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzaProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlzaProject/Pods-AlzaProject.debug.xcconfig"; sourceTree = "<group>"; };
+		12783A17FD6FC222FCB9A639 /* Pods-AlzaProjectUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzaProjectUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlzaProjectUnitTests/Pods-AlzaProjectUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		273385556BFF629666E0A091 /* Pods_AlzaProjectUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzaProjectUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6763B9EB044BBA57BD6217B7 /* Pods-AlzaProjectUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzaProjectUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlzaProjectUnitTests/Pods-AlzaProjectUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		685544E50CA8B6EE47B7C006 /* Pods_AlzaProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzaProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E263431106C33822004B3E /* Pods-AlzaProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzaProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlzaProject/Pods-AlzaProject.release.xcconfig"; sourceTree = "<group>"; };
 		A844FD9821E423BA0001EE12 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +93,9 @@
 		A8A7375B220C52C4009C56CD /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 		A8A7375D220C557A009C56CD /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
 		A8A7375F220C5666009C56CD /* MainFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowController.swift; sourceTree = "<group>"; };
+		A8AECB2D2218D16E00D0C5B0 /* AlzaProjectUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlzaProjectUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8AECB2F2218D16E00D0C5B0 /* AlzaProjectUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzaProjectUnitTests.swift; sourceTree = "<group>"; };
+		A8AECB312218D16E00D0C5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +107,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8AECB2A2218D16E00D0C5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9138EB4A6C0CD28EF7AEB788 /* Pods_AlzaProjectUnitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				685544E50CA8B6EE47B7C006 /* Pods_AlzaProject.framework */,
+				273385556BFF629666E0A091 /* Pods_AlzaProjectUnitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				A896BA3521E27E49004C6E10 /* AlzaProject */,
+				A8AECB2E2218D16E00D0C5B0 /* AlzaProjectUnitTests */,
 				A896BA3421E27E49004C6E10 /* Products */,
 				AC2A322B7099D4FFDE06668B /* Pods */,
 				18B3187E7A04C115E9194999 /* Frameworks */,
@@ -133,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				A896BA3321E27E49004C6E10 /* AlzaProject.app */,
+				A8AECB2D2218D16E00D0C5B0 /* AlzaProjectUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,11 +298,22 @@
 			path = "Product Detail";
 			sourceTree = "<group>";
 		};
+		A8AECB2E2218D16E00D0C5B0 /* AlzaProjectUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8AECB2F2218D16E00D0C5B0 /* AlzaProjectUnitTests.swift */,
+				A8AECB312218D16E00D0C5B0 /* Info.plist */,
+			);
+			path = AlzaProjectUnitTests;
+			sourceTree = "<group>";
+		};
 		AC2A322B7099D4FFDE06668B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0FB302F196F91CF5D8C004BB /* Pods-AlzaProject.debug.xcconfig */,
 				77E263431106C33822004B3E /* Pods-AlzaProject.release.xcconfig */,
+				12783A17FD6FC222FCB9A639 /* Pods-AlzaProjectUnitTests.debug.xcconfig */,
+				6763B9EB044BBA57BD6217B7 /* Pods-AlzaProjectUnitTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -300,6 +340,26 @@
 			productReference = A896BA3321E27E49004C6E10 /* AlzaProject.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A8AECB2C2218D16E00D0C5B0 /* AlzaProjectUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8AECB362218D16F00D0C5B0 /* Build configuration list for PBXNativeTarget "AlzaProjectUnitTests" */;
+			buildPhases = (
+				2D8E7EEF2ACC1EDD4D2204A8 /* [CP] Check Pods Manifest.lock */,
+				A8AECB292218D16E00D0C5B0 /* Sources */,
+				A8AECB2A2218D16E00D0C5B0 /* Frameworks */,
+				A8AECB2B2218D16E00D0C5B0 /* Resources */,
+				75F012F478E266E18B76F11C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8AECB332218D16E00D0C5B0 /* PBXTargetDependency */,
+			);
+			name = AlzaProjectUnitTests;
+			productName = AlzaProjectUnitTests;
+			productReference = A8AECB2D2218D16E00D0C5B0 /* AlzaProjectUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,6 +372,10 @@
 				TargetAttributes = {
 					A896BA3221E27E49004C6E10 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					A8AECB2C2218D16E00D0C5B0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A896BA3221E27E49004C6E10;
 					};
 				};
 			};
@@ -329,6 +393,7 @@
 			projectRoot = "";
 			targets = (
 				A896BA3221E27E49004C6E10 /* AlzaProject */,
+				A8AECB2C2218D16E00D0C5B0 /* AlzaProjectUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -344,6 +409,13 @@
 				A896BA7C21E2B1BC004C6E10 /* Products.storyboard in Resources */,
 				A896BA3C21E27E49004C6E10 /* Home.storyboard in Resources */,
 				A844FD9B21E425B30001EE12 /* ProductDetail.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AECB2B2218D16E00D0C5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +454,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlzaProject/Pods-AlzaProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D8E7EEF2ACC1EDD4D2204A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlzaProjectUnitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75F012F478E266E18B76F11C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AlzaProjectUnitTests/Pods-AlzaProjectUnitTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlzaProjectUnitTests/Pods-AlzaProjectUnitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B12998EE3E728EE7BC0B6BAF /* [CP] Check Pods Manifest.lock */ = {
@@ -441,7 +569,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8AECB292218D16E00D0C5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8AECB302218D16E00D0C5B0 /* AlzaProjectUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8AECB332218D16E00D0C5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A896BA3221E27E49004C6E10 /* AlzaProject */;
+			targetProxy = A8AECB322218D16E00D0C5B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A896BA3A21E27E49004C6E10 /* Home.storyboard */ = {
@@ -617,6 +761,48 @@
 			};
 			name = Release;
 		};
+		A8AECB342218D16F00D0C5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12783A17FD6FC222FCB9A639 /* Pods-AlzaProjectUnitTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X324LUL4DB;
+				INFOPLIST_FILE = AlzaProjectUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = QestTest.AlzaProjectUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlzaProject.app/AlzaProject";
+			};
+			name = Debug;
+		};
+		A8AECB352218D16F00D0C5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6763B9EB044BBA57BD6217B7 /* Pods-AlzaProjectUnitTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X324LUL4DB;
+				INFOPLIST_FILE = AlzaProjectUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = QestTest.AlzaProjectUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlzaProject.app/AlzaProject";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -634,6 +820,15 @@
 			buildConfigurations = (
 				A896BA4621E27E4D004C6E10 /* Debug */,
 				A896BA4721E27E4D004C6E10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8AECB362218D16F00D0C5B0 /* Build configuration list for PBXNativeTarget "AlzaProjectUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8AECB342218D16F00D0C5B0 /* Debug */,
+				A8AECB352218D16F00D0C5B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
