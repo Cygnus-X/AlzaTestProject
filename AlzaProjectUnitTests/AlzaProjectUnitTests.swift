@@ -8,13 +8,16 @@
 
 import XCTest
 import Moya
+import Result
+import RxSwift
 @testable import AlzaProject
 
 class AlzaProjectUnitTests: XCTestCase {
-    let dependencies = AppDependency(categoryServices: CategoryServices(), productServices: ProductServices())
+    var dependencies : AppDependency!
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        dependencies = AppDependency(categoryServices: CategoryServices(), productServices: ProductServices())
     }
 
     override func tearDown() {
@@ -33,34 +36,12 @@ class AlzaProjectUnitTests: XCTestCase {
         }
     }
     
-    func testHomeViewModel() {
-        
-        let homeVM = HomeViewModel(dependencies: dependencies)
-        XCTAssert(homeVM.dependencies != nil)
-        
-        
-        let expectation = self.expectation(description: "Execute the call related to functionality X")
-        
-        class IntegrationTestMockPlugin: PluginType {
-            
-            func didReceive(_ result: Result<Moya.Response, MoyaError>, target: TargetType) {
-                
-                guard let apiTarget = target as? APIService, case .expectedTarget = apiTarget else {
-                    XCTFail("did hit an unexpected target")
-                }
-                expectation?.fulfill()
-            }
-        }
-        
-        let integrationTestPlugin = IntegrationTestMockPlugin()
-        let stubbingProvider = MoyaProvider<APIService>(stubClosure: MoyaProvider.immediatelyStub, plugins: [integrationTestPlugin])
-        
-        ...
-        
-        func testIntegration() {
-            // execute your app’s functionality, and by the time it is expected to be completed, just run:
-            self.waitForExpectations(timeout: 50.0, handler: nil)
-        }
+    func testGetCategory() {
+        let categories = dependencies.categoryServices.getCategories()
+        categories.subscribe(onNext: { data in
+            print(data.data.first)
+        }).dispose()
+    
     }
 
 }
